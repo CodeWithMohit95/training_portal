@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>TechLearn Academy System</title>
+   
+
+</head>
+
+<body>
+    
+{% extends "base.html" %}
+
+{% block content %}
+<h2>TechLearn Academy Dashboard</h2>
+
+<h3>Total Courses: {{ total_courses }}</h3>
+<h3>Total Trainers: {{ total_trainers }}</h3>
+<h3>Total Students: {{ total_students }}</h3>
+{% endblock %}
+
+    
+</body>
+</html>
+

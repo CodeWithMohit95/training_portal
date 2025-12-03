@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>TechLearn Academy System</title>
+    
+
+</head>
+
+<body>
+    {% extends "base.html" %}
+
+{% block content %}
+<h2>Students</h2>
+
+<table border="1">
+<tr>
+  <th>Name</th>
+  <th>Email</th>
+  <th>Course</th>
+  <th>Trainer</th>
+  <th>Status</th>
+</tr>
+
+{% for s in students %}
+<tr>
+  <td>{{ s.first_name }} {{ s.last_name }}</td>
+  <td>{{ s.email }}</td>
+  <td>{{ s.enrolled_course }}</td>
+  <td>{{ s.trainer }}</td>
+  <td>{{ s.is_active }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
+
+    
+</body>
+</html>
